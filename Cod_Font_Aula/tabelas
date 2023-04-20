@@ -1,0 +1,35 @@
+!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tabelas</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <tbody>
+        <table>
+            <thead>Tabela temperatura</thead>
+
+            <tr>
+            <th>Cidade</th>
+            <th>Data</th>
+            <th>Temp</th>
+            </tr>
+            <tr>
+                <td>Viamão</td>
+                <td>20.04.23</td>
+                <td>19 graus</td>
+            </tr>
+            </tbody>
+            <body>
+    </footer>
+    </html>
+
+
+
+    
+
+
