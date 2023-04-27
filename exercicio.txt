@@ -1,0 +1,282 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body > header{
+    padding: 16px 0;
+    background-color: #fa0a0a;
+    color: #fdfcf9;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header li{
+    display: inline;
+    margin-left: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+header li a{
+    color: #fdfcf9;
+    text-decoration: none;
+}
+
+.container{
+    width: 1366px;
+    margin: 0 auto 0 auto;
+}
+
+.articles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.articles article img{
+    height: 260px;
+    width: 410px;
+}
+
+.articles article{
+    width: 30%;
+}
+
+section{
+    padding: 16px 0;
+}
+
+section h2, 
+.articles article{
+    margin-bottom: 16px;
+}
+
+.articles article h3{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.articles article a{
+    background-color: rgb(26, 128, 0);
+    color: aliceblue;
+    text-decoration: none;
+    padding: 8px;
+    display: inline-block;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.articles article a:hover{
+    text-decoration: underline;
+}
+
+#films{
+    background-color: #d1eecc;
+}
+
+#game{
+    background-color: #f3f2be;
+}
+#course{
+    background-color: #ffffff;
+}
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Notícias</title>
+    <link rel="stylesheet" href="./main.css"/>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Portal da Tecnologia</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#films" title="Ir para Filmes">Filmes</a>
+                    </li>
+                    <li>
+                        <a href="#couser" title="Ir para cursos">Cursos</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="films">
+        <div class="container">
+            <h2>Filmes</h2>
+            <div class="articles">
+                <article>
+                    <img src="/Midias/mario-g1.png" alt="Filme lançado este Ano"/>
+                    <header>
+                        <time class="creation-date">25/04/23 ás 16:00</time>
+                    </header>
+                    <h3>Filme lançado este Ano</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros interdum, feugiat eros in, dictum mi. 
+                        <br/><a href="#" title="Leia a notícia completa">Saiba mais</a>
+                    </p>
+                </article>
+                <article>
+                    <img src="/Midias/mario3.png" alt="O queridinho do momento"/>
+                    <header>
+                        <time class="creation-date">25/04/23 ás 16:00</time>
+                    </header>
+                    <h3>O queridinho do Momento</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros interdum, feugiat eros in, dictum mi. 
+                        <br/><a href="#" title="Leia a notícia completa">Saiba mais</a>
+                    </p>
+                </article>
+                <article>
+                    <img src="/Midias/mario2.png" alt="Cogumelos"/>
+                    <header>
+                        <time class="creation-date">25/04/23 ás 16:00</time>
+                    </header>
+                    <h3>Cogumelos</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros interdum, feugiat eros in, dictum mi. 
+                        <br/><a href="#" title="Leia a notícia completa">Saiba mais</a>
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="game">
+        <div class="container">
+            <h2>Games</h2>
+            <div class="articles">
+                <article>
+                    <img src="/Midias/img10.png" alt="Jogo"/>
+                    <header>
+                        <time class="creation-date">25/04/23 ás 16:00</time>
+                    </header>
+                    <h3>Roblox</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros interdum, feugiat eros in, dictum mi. 
+                        <br/><a href="#" title="Leia a notícia completa">Saiba mais</a>
+                    </p>
+                </article>
+                <article>
+                    <img src="/Midias/img7.png" alt="jogo"/>
+                    <header>
+                        <time class="creation-date">25/04/23 ás 16:00</time>
+                    </header>
+                    <h3>Gamer de Programção</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros interdum, feugiat eros in, dictum mi. 
+                        <br/><a href="#" title="Leia a notícia completa">Saiba mais</a>
+                    </p>
+                </article>
+                <article>
+                    <img src="/Midias/img8.png" alt="jogo"/>
+                    <header>
+                        <time class="creation-date">25/04/23 ás 16:00</time>
+                    </header>
+                    <h3>O jogo do Momento</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros interdum, feugiat eros in, dictum mi. 
+                        <br/><a href="#" title="Leia a notícia completa">Saiba mais</a>
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="course">
+        <div class="container">
+            <h2>Cursos</h2>
+            <div class="articles">
+                <article>
+                    <img src="/Midias/img6.png" alt="Linguagem de Marcação"/>
+                    <header>
+                        <time class="creation-date">25/04/23 ás 16:00</time>
+                    </header>
+                    <h3>Linguagem de Marcação</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros interdum, feugiat eros in, dictum mi. 
+                        <br/><a href="#" title="Leia a notícia completa">Saiba mais</a>
+                    </p>
+                </article>
+                <article>
+                    <img src="/Midias/img11.png" alt="Linguagem de Estilos"/>
+                    <header>
+                        <time class="creation-date">25/04/23 ás 16:00</time>
+                    </header>
+                    <h3>Linguagem de Estilos</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros interdum, feugiat eros in, dictum mi. 
+                        <br/><a href="#" title="Leia a notícia completa">Saiba mais</a>
+                    </p>
+                </article>
+                <article>
+                    <img src="/Midias/images 5.png" alt="Linguagem de Programação"/>
+                    <header>
+                        <time class="creation-date">25/04/23 ás 16:00</time>
+                    </header>
+                    <h3>Linguagem de Programação</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros interdum, feugiat eros in, dictum mi. 
+                        <br/><a href="#" title="Leia a notícia completa">Saiba mais</a>
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="artificial intelligence">
+        <div class="container">
+            <h2>Inteligência Artificial</h2>
+            <div class="articles">
+                <article>
+                    <img src="/Midias/ia1.jpg" alt="IA"/>
+                    <header>
+                        <time class="creation-date">25/04/23 ás 16:00</time>
+                    </header>
+                    <h3>Futuro</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros interdum, feugiat eros in, dictum mi. 
+                        <br/><a href="#" title="Leia a notícia completa">Saiba mais</a>
+                    </p>
+                </article>
+                <article>
+                    <img src="/Midias/ia2.jpg" alt="IA"/>
+                    <header>
+                        <time class="creation-date">25/04/23 ás 16:00</time>
+                    </header>
+                    <h3>Meta Verso</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros interdum, feugiat eros in, dictum mi. 
+                        <br/><a href="#" title="Leia a notícia completa">Saiba mais</a>
+                    </p>
+                </article>
+                <article>
+                    <img src="/Midias/ia3.jpg" alt="IA"/>
+                    <header>
+                        <time class="creation-date">25/04/23 ás 16:00</time>
+                    </header>
+                    <h3>Revolução</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros interdum, feugiat eros in, dictum mi. 
+                        <br/><a href="#" title="Leia a notícia completa">Saiba mais</a>
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
