@@ -1,121 +1,131 @@
+/* ESTILO 1 */
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-header {
-padding: 16px 0;
-background-color: #182c61;
-color: #ecf0f1;
+header h1,
+section h2{
+    font-family: 'Bungee', cursive;
+}
+body{
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
-/*h1{
-    color: #567714;
-}*/
-header nav li {
+/* ESTILO 2 */
+
+header, footer{
+    padding: 16px 0;
+    background-color: #182c61;
+    color: #ecf0f1;
+}
+
+header nav li{
     display: inline;
     margin-left: 16px;
     font-size: 18px;
 }
 
-header nav li a {
-    color:#ecf0f1;
+header nav li a{
+    color: #ecf0f1;
     text-decoration: none;
 }
 
-.container {
-max-width: 1280px;
-width: 100%;
-margin: 0 auto;
+/* ESTILO 3 */
+.container{
+    max-width: 1280px;
+    width: center;
+    margin: 0 auto;
 }
-header .container {
+
+/* ESTILO 4 */
+header .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-/* Estilo 5 */
+
+/* ESTILO 5 */
 header .container,
-section .container {
+section .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-/* Estilo 6 */
-.brands-list img {
+
+/* ESTILO 6 */
+.brands-list img{
+    height: 24px;
+}
+
+.brands-list li{
     display: inline;
     margin-right: 8px;
 }
-/* Estilo 7 */
-section .container {
+
+/* ESTILO 7 */
+section .container{
     align-items: flex-start;
 }
-section {
+
+section{
     padding: 24px 0;
 }
-section h2 {
+
+section h2{
     margin-bottom: 16px;
 }
-section {
+
+section{
     color: #182c61;
 }
-section p {
+
+section p{
     margin-bottom: 8px;
 }
-/* Estilo 8 */
-.store-front {
+.Store_Facade{
     margin-right: 32px;
 }
 #contact .container{
     display: block;
 }
-.container-methods {
+.contact-methods{
     display: flex;
     justify-content: space-between;
 }
-
 form input,
 form textarea,
-form button {
+form button{
     display: block;
     width: 320px;
-    margin-right: 8px;
-    padding: 8px;
+    margin-bottom: 8px;
 }
-form textarea {
-    resize: none;
-    height: 180px;
-}
-form button {
+form button{
     background-color: #182c61;
     color: #ecf0f1;
     border: none;
     cursor: pointer;
 }
-form button:hover {
-    background-color: #314e9e;
+form button:hover{
+    background-color: #314e90;
 }
-input:focus, textarea:focus {
-    outline: #182c61;
+input:focus, textarea:focus{
+    outline-color: #182c61;
 }
-.social-links img {
+
+.Social-Links img {
     height: 24px;
 }
-.social-links li {
+.Social-Links li{
     display: inline;
     margin-right: 8px;
 }
-.social-links li a {
-    text-decoration: none;
-}
-footer {
-    background-color: #182c61;
-    padding: 10px 0;
-    color: #ecf0f1;
+.Social-Links li a{
+    text-align: none;
 }
 
-footer h5{
-    margin-left: 16px;
-}
+
+
 
 
 
