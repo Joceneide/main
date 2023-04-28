@@ -1,10 +1,10 @@
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 header {
-padding:16px 0;
+padding: 16px 0;
 background-color: #182c61;
 color: #ecf0f1;
 }
@@ -59,23 +59,31 @@ section {
     color: #182c61;
 }
 section p {
-    margin-bottom: 8;
+    margin-bottom: 8px;
 }
 /* Estilo 8 */
 .store-front {
-    margin-right: 32;
+    margin-right: 32px;
 }
+#contact .container{
+    display: block;
+}
+.container-methods {
+    display: flex;
+    justify-content: space-between;
+}
+
 form input,
 form textarea,
 form button {
     display: block;
     width: 320px;
     margin-right: 8px;
-    padding: 8;
+    padding: 8px;
 }
 form textarea {
     resize: none;
-    height: 180;
+    height: 180px;
 }
 form button {
     background-color: #182c61;
@@ -99,6 +107,16 @@ input:focus, textarea:focus {
 .social-links li a {
     text-decoration: none;
 }
+footer {
+    background-color: #182c61;
+    padding: 10px 0;
+    color: #ecf0f1;
+}
+
+footer h5{
+    margin-left: 16px;
+}
+
 
 
 
