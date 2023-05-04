@@ -1,46 +1,84 @@
-sole.log(resultado); 
+for (var r = 0; r < 11; r++){
+    console.log("7 x " + r + " = " + 7 * r);
+}
+7 x 0 = 0
+7 x 1 = 7
+7 x 2 = 14
+7 x 3 = 21
+7 x 4 = 28
+7 x 5 = 35
+7 x 6 = 42
+7 x 7 = 49
+7 x 8 = 52
+7 x 9 = 63
+7 x 10 = 70
 
-undefined
-resultado
-2
-let resultado = 1 * 3;
-console.log(resultado); 
-undefined
-resultado
-3
-let resultado = 1 * 4;
-console.log(resultado); 
 
-undefined
-resultado
-4
-let resultado = 1 * 5;
-console.log(resultado);  
-undefined
-resultado
-5
-let resultado = 1 * 6;
-console.log(resultado); 
-undefined
-resultado
-6
-let resultado = 1 * 7;
-console.log(resultado); 
-undefined
-resultado
-7
-let resultado = 1 * 8;
-console.log(resultado);
-undefined
-resultado
-8
-let resultado = 1 * 9;
-console.log(resultado); 
-undefined
-resultado
-9
-let resultado = 1 * 10;
-console.log(resultado); 
-undefined
-resultado
-10
+// Loop externo para iterar de 1 a 10
+for (let i = 1; i <= 10; i++) {
+
+  // Imprime o cabeçalho da tabuada
+  console.log(`Tabuada do ${i}:`);
+
+  // Loop interno para iterar de 1 a 10 para cada número da tabuada
+  for (let j = 1; j <= 10; j++) {
+
+    // Multiplica os números e imprime o resultado
+    const resultado = i * j;
+    console.log(`${i} x ${j} = ${resultado}`);
+  }
+
+  // Adiciona uma linha em branco entre cada tabuada
+  console.log("");
+}
+
+
+Tabuada do 1:
+1 x 1 = 1
+1 x 2 = 2
+1 x 3 = 3
+1 x 4 = 4
+1 x 5 = 5
+1 x 6 = 6
+1 x 7 = 7
+1 x 8 = 8
+1 x 9 = 9
+1 x 10 = 10
+
+Tabuada do 2:
+2 x 1 = 2
+2 x 2 = 4
+2 x 3 = 6
+2 x 4 = 8
+2 x 5 = 10
+2 x 6 = 12
+2 x 7 = 14
+2 x 8 = 16
+2 x 9 = 18
+2 x 10 = 20
+
+Tabuada do 3:
+3 x 1 = 3
+3 x 2 = 6
+3 x 3 = 9
+3 x 4 = 12
+3 x 5 = 15
+3 x 6 = 18
+3 x 7 = 21
+3 x 8 = 24
+3 x 9 = 27
+3 x 10 = 30
+
+...
+
+Tabuada do 10:
+10 x 1 = 10
+10 x 2 = 20
+10 x 3 = 30
+10 x 4 = 40
+10 x 5 = 50
+10 x 6 = 60
+10 x 7 = 70
+10 x 8 = 80
+10 x 9 = 90
+10 x 10 = 100
