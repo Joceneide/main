@@ -82,3 +82,72 @@ Tabuada do 10:
 10 x 8 = 80
 10 x 9 = 90
 10 x 10 = 100
+
+
+
+
+let cont = 1
+
+numTab = prompt("Informe o numero da tabuada:");
+tamTab = prompt("Informe o tamanho da tabuada:");
+
+do{
+    console.log(`Tabuada do ${numTab}:`);
+
+    resultado = numTab * tamTab;
+    console.log(`${cont} x ${numTab} = ${resultado}`);
+    cont ++;
+    
+  }while(cont <= tamTab);
+
+  Tabuada do 8:
+VM127:11 1 x 8 = 112
+VM127:8 Tabuada do 8:
+VM127:11 2 x 8 = 112
+VM127:8 Tabuada do 8:
+VM127:11 3 x 8 = 112
+VM127:8 Tabuada do 8:
+VM127:11 4 x 8 = 112
+VM127:8 Tabuada do 8:
+VM127:11 5 x 8 = 112
+VM127:8 Tabuada do 8:
+VM127:11 6 x 8 = 112
+VM127:8 Tabuada do 8:
+VM127:11 7 x 8 = 112
+VM127:8 Tabuada do 8:
+VM127:11 8 x 8 = 112
+VM127:8 Tabuada do 8:
+VM127:11 9 x 8 = 112
+VM127:8 Tabuada do 8:
+VM127:11 10 x 8 = 112
+VM127:8 Tabuada do 8:
+VM127:11 11 x 8 = 112
+VM127:8 Tabuada do 8:
+VM127:11 12 x 8 = 112
+VM127:8 Tabuada do 8:
+VM127:11 13 x 8 = 112
+VM127:8 Tabuada do 8:
+VM127:11 14 x 8 = 112
+14
+
+
+let tab, tam
+tab = prompt("Informe a tabuada");
+tam = prompt("Informe tamanho");
+function tabuada (numTab, tamanho){
+ 
+  for(cont = 1; cont<= tamanho; cont++){
+      console.log(`${cont} x ${numTab} = ${cont* numTab}`);//1 x 6 = 6
+  }
+}
+tabuada(tab, tam);
+VM203:7 1 x 5 = 5
+VM203:7 2 x 5 = 10
+VM203:7 3 x 5 = 15
+VM203:7 4 x 5 = 20
+VM203:7 5 x 5 = 25
+VM203:7 6 x 5 = 30
+VM203:7 7 x 5 = 35
+VM203:7 8 x 5 = 40
+VM203:7 9 x 5 = 45
+undefined
