@@ -1,5 +1,3 @@
-
-
 1. Faça um Programa que peça dois números e imprima o maior deles.
 
 // solicita ao usuário dois números
@@ -43,11 +41,10 @@ if (numero > 0) {
 VM46:6 O número 5 é positivo.
 undefined
 *********************************************************
-
 3. Faça um Programa que verifique se uma letra digitada é "F" ou "M". Conforme a letra escrever: F - Feminino, M -
 Masculino, Sexo Inválido.
-const sexo = prompt("Digite o sexo (F ou M):");
 
+const sexo = prompt("Digite o sexo (F ou M):");
 if (sexo === "F" || sexo === "f") {
   console.log("F - Feminino");
 } else if (sexo === "M" || sexo === "m") {
@@ -103,7 +100,7 @@ if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u"
 }
 VM69:8 A letra digitada é uma consoante
 undefined
-********************************************************
+**************************************************************
 
 5. Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve calcular a média alcançada
 por aluno e apresentar:
@@ -209,7 +206,7 @@ console.log("O menor número é: " + menor);
 VM85:25 O maior número é: 89
 VM85:26 O menor número é: 12
 undefined
-******************************************************************
+*************************************************************************
 8. Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo
 que a decisão é sempre pelo mais barato.
 
@@ -437,6 +434,7 @@ undefined
 
 13. Faça um Programa que leia um número e exiba o dia correspondente da semana. (1-Domingo, 2- Segunda, etc.),
 se digitar outro valor deve aparecer valor inválido.
+
 const diaSemana = parseInt(prompt("Digite um número correspondente ao dia da semana (1-Domingo, 2-Segunda, etc.):"));
 
 switch (diaSemana) {
@@ -668,9 +666,6 @@ if (numero >= 1000) {
 O número inserido possui 7 centena(s), 5 dezena(s) e 4 unidade(s).
 undefined
 ****************************************************************************************************
-
-
-
 20. Faça um Programa para leitura de três notas parciais de um aluno. O programa deve calcular a média alcançada
 por aluno e presentar:
 a. A mensagem "Aprovado", se a média for maior ou igual a 7, com a respectiva média alcançada;
