@@ -1,19 +1,23 @@
-const formulario = document.querySelector('#meuFormulario');
-const mensagem = document.querySelector('#mensagem');
+const formulario = document.querySelector('form');
+
 
 formulario.addEventListener('submit', function(event) {
-  event.preventDefault(); // evita o envio do formulário
+  event.preventDefault(); 
 
-const campoA = Number(document.querySelector('#campoA').value);
-const campoB = Number(document.querySelector('#campoB').value);
+const campoA = document.querySelector('#campoa');
+const campoB = document.querySelector('#campob');
+const mensagemSucesso = 'Formulário válido.'
+const mensagemFalha = 'Formulário inválido. O campo B deve ser maior que o campo A.'
 
-if (campoB > campoA) {
-    mensagem.innerHTML = 'Formulário válido.';
-    mensagem.style.color = 'green';
+formValido = (campoB.value > campoA.value)
+
+if (formValido) {
+    alert (mensagemSucesso);
 } else {
-    mensagem.innerHTML = 'Formulário inválido. O campo B deve ser maior que o campo A.';
-    mensagem.style.color = 'red';
+    alert (mensagemFalha);
 }
 });
+
+
 
 
