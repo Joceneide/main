@@ -1,0 +1,164 @@
+Crie um formulário HTML e no Css que possua dois campos
+numéricos, campo A e campo B e um botão para submeter o formulário.
+
+Crie uma validação no JavaScript, onde o formulário será
+válido caso o número B seja maior que o número A.
+
+Exiba uma mensagem positiva quando o formulário for válido
+e uma mensagem negativa quando for inválido.
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExercícioJS</title>
+    <link  rel="stylesheet" href="./main.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulário</h1>
+        <h2>HTML</h2>
+        <form id="form_html">
+            <input type="number" id="campo_a"required placeholder="Digite o primeiro número"/>
+            <input type="number" id="campo_b"required placeholder="Digite os segundo número "/>
+            <button type="submit" id="enviar">Enviar</button>
+        </form>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    margin: 80px auto;
+    max-width: 640px;
+    width: 100%;
+}
+
+form{
+    margin-top: 40px;
+}
+
+input, button{
+    display: block;
+    padding: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    resize: none;
+}
+
+button{
+    background-color: #2ecc71;
+    border: none;
+    text-transform: uppercase;
+    color: #ffff;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #27ae60;
+}
+
+const form = document.getElementById('form_html');
+
+form.addEventListener('submit', function(e){
+    
+    let formValido = false;
+
+    e.preventDefault();
+
+    const campoA = document.getElementById('campo_a');
+    const campoB = document.getElementById('campo_b');
+    const mensagemSucesso = `Sucesso. O Segundo - ${campoB.value} número é maior que o Primeiro - ${campoA.value}.`
+    const mensagemNegativa = `Falhou. Porque o Primeiro número ${campoA.value} é maior que o Segundo número ${campoB.value}.`
+
+    formValido = (campoB.value > campoA.value);
+
+    if(formValido){
+        alert(mensagemSucesso);
+        campoA.value = '';
+        campoB.value = '';
+    }else{
+        alert(mensagemNegativa);
+    }
+})
+
+const form = document.getElementById("myForm");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const campoA = parseInt(document.getElementById("campoA").value);
+  const campoB = parseInt(document.getElementById("campoB").value);
+
+  if (campoB > campoA) {
+    // formulário válido, envia para o servidor
+    form.submit();
+  } else {
+    // formulário inválido, exibe mensagem de erro
+    alert("O valor do campo B deve ser maior que o valor do campo A.");
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+<form id="meuFormulario">
+  <label for="campoA">Campo A:</label>
+  <input type="number" id="campoA" name="campoA" required>
+
+  <label for="campoB">Campo B:</label>
+  <input type="number" id="campoB" name="campoB" required>
+
+  <button type="submit">Enviar</button>
+</form>
+
+<div id="mensagem"></div>
+
+
+
+input[type="number"] {
+  width: 100px;
+}
+
+
+const formulario = document.querySelector('#meuFormulario');
+const mensagem = document.querySelector('#mensagem');
+
+formulario.addEventListener('submit', function(event) {
+  event.preventDefault(); // evita o envio do formulário
+
+  const campoA = Number(document.querySelector('#campoA').value);
+  const campoB = Number(document.querySelector('#campoB').value);
+
+  if (campoB > campoA) {
+    mensagem.innerHTML = 'Formulário válido.';
+    mensagem.style.color = 'green';
+  } else {
+    mensagem.innerHTML = 'Formulário inválido. O campo B deve ser maior que o campo A.';
+    mensagem.style.color = 'red';
+  }
+});
+
+
+
+exerccios****form.html*****
+https://github.com/Joceneide/main/tree/4e447aad3328ce869fd2bd98e2061d5a12645b2d/Exercicio

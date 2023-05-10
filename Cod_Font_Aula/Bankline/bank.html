@@ -11,13 +11,19 @@
     <div class="container">
         <h1>Internet Banking</h1>
         <h2> Depósitos</h2>
-        <form >
-            <input type="text"id="nome_benefeciario" required placeholder="Nome do beneficiário"/>
+        <form id="form_dep">
+            <input type="text"id="nome_benefeciario"placeholder="Nome do beneficiário"/>
+            <p clss="mensagem_erro">
+                O nome não está completo!
+            </p>
             <input type="number"id="numero_conta" required  placeholder="Número da conta"/>
-            <input type="number"id="valor_depósito" required  placeholder ="Valor"/>
+            <input type="number"required id="valor_depósito"/>
             <textarea placeholder="Descrição (opcional)" id="descricao"></textarea>
             <button type="submit" id="btn_depositar">Depositar</button>
         </form>
+        <p class="mensagem_sucesso">
+           
+        </p>
     </div>
     <script src="./main.js"></script>   
 </body>
