@@ -1,44 +1,57 @@
-const nomeBeneficiario =document.getElementById()
+
+const nomeBeneficiario = document.getElementById('nome_beneficiario');
+let formValido = false;
+const form = document.getElementById('form_dep');
+
+
 function validaNome(nomeCompleto){
-    const nomeComoArray = nomeCompleto.split('');
+    const nomeComoArray = nomeCompleto.split(' ');
 
     return nomeComoArray.length >= 2;
 }
-const form = document.getElementById('form_dep');
 
-form.addEntListener('submit', function(e);
-    
-    e.preventDefaut();
+form.addEventListener('submit', function(e){
+
+    e.preventDefault();
 
     const numeroConta = document.getElementById('numero_conta');
     const valorDeposito = document.getElementById('valor_deposito');
-    const menssagemSucesso = 'Valor de: <b>${valorDeposito.value}foi depositado para o cliente'); 
+    const mensagemSucesso = `Valor de: <b>${valorDeposito.value}</b> foi depositado para o cliente <b>${nomeBeneficiario.value}</b> - conta nº: <b>${numeroConta.value}</b>`
 
     formValido = validaNome(nomeBeneficiario.value);
 
     if(formValido){
-        const containerMenssagemSucesso = document.querySelector('.menssagem_sucesso');
-        containerMenssagemSucesso.innerHTML = menssagemSucesso;
-        containerMenssagemSucesso.style.display = 'block';
+        const campoA = document.querySelector('#campo_a');
+        const campoB = document.querySelector('#campo_b');
+        const ContainerMensagemSucesso = document.querySelector('.mensagem_sucesso');
+        ContainerMensagemSucesso.innerHTML = mensagemSucesso;
+        ContainerMensagemSucesso.style.display = 'block';
 
         nomeBeneficiario.value = '';
         numeroConta.value = '';
-        valorDeposito.value ='';
+        valorDeposito.value = '';
+        
+    formValido = (campoB.value > campoA.value)
+
+    if (formValido) {
+        alert (mensagemSucesso);
 
     }else{
         nomeBeneficiario.style.border = '1px solid red';
-        document.querySelector('.menssagem_erro').style.display ='block'; 
+        document.querySelector('.mensagem_erro').style.display = 'block';
     }
 })
 
-nomeBeneficiario.addEventListener("keyup", function(e){
+nomeBeneficiario.addEventListener('keyup', function(e){
     console.log(e.target.value);
-    formValid = validaNome(e.target.value);
+    formValido = validaNome(e.target.value);
 
-    if(!formValid){
-        document.querySelector('mensagem_erro').style.display = 'block';
+    if(formValido){
+        nomeBeneficiario.classList.remove('error');
+        document.querySelector('.mensagem_erro').style.display = 'none';
+    }else{
+        nomeBeneficiario.classList.add('error');
+        document.querySelector('.mensagem_erro').style.display = 'block';
     }
-
-
 })
 

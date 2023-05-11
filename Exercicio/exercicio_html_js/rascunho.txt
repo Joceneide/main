@@ -155,7 +155,7 @@ formulario.addEventListener('submit', function(event) {
   } else {
     mensagem.innerHTML = 'Formulário inválido. O campo B deve ser maior que o campo A.';
     mensagem.style.color = 'red';
-  }
+  }ricardo br
 });
 
 
