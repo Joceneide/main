@@ -1,19 +1,34 @@
-const formulario = document.querySelector('#meuFormulario');
-const mensagem = document.querySelector('#mensagem');
+const nomeBeneficiario = document.getElementById('nome_beneficiario');
+let formValido = false;
+const form = document.getElementById('form_dep');
 
-formulario.addEventListener('submit', function(event) {
-  event.preventDefault(); // evita o envio do formulário
 
-const campoA = Number(document.querySelector('#campoA').value);
-const campoB = Number(document.querySelector('#campoB').value);
+function validaNome(nomeCompleto){
+    const nomeComoArray = nomeCompleto.split(' ');
 
-if (campoB > campoA) {
-    mensagem.innerHTML = 'Formulário válido.';
-    mensagem.style.color = 'green';
-} else {
-    mensagem.innerHTML = 'Formulário inválido. O campo B deve ser maior que o campo A.';
-    mensagem.style.color = 'red';
+    return nomeComoArray.length >= 2;
 }
-});
 
+form.addEventListener('submit', function(e){
 
+    e.preventDefault();
+
+    const numeroConta = document.getElementById('numero_conta');
+    const valorDeposito = document.getElementById('valor_deposito');
+    const mensagemSucesso = `Valor de: <b>${valorDeposito.value}</b> foi depositado para o cliente <b>${nomeBeneficiario.value}</b> - conta nº: <b>${numeroConta.value}</b>`
+
+    formValido = validaNome(nomeBeneficiario.value);
+
+    if(formValido){
+        const ContainerMensagemSucesso = document.querySelector('.mensagem_sucesso');
+        ContainerMensagemSucesso.innerHTML = mensagemSucesso;
+        ContainerMensagemSucesso.style.display = 'block';
+
+        nomeBeneficiario.value = '';
+        numeroConta.value = '';
+        valorDeposito.value = '';
+    }else{
+        nomeBeneficiario.style.border = '1px solid red';
+        document.querySelector('.mensagem_erro').style.display = 'block';
+    }
+})
