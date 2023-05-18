@@ -1,0 +1,59 @@
+
+
+
+        Seu nome tem origem do inglês Hyper Text Markup Language,
+        que significa “linguagem de marcação de hipertexto”.
+        
+        Como assim “linguagem de marcação”? Pois é, o HTML não é considerado uma
+        linguagem de programação como as demais e você já vai descobrir o motivo disso.
+        HTML é uma linguagem de marcação utilizada para estruturar os elementos da página, como parágrafos,
+        links, títulos, tabelas, imagens e até vídeos.
+        
+        
+        Por exemplo, se você deseja inserir um parágrafo na tela, poderá utiliza
+        a tag <p></p> para isso, colocando o texto desejado dentro do elemento, como mostrado abaixo:
+        <p>Este é um paraágrafo</p>
+
+
+        Cascading Style Sheet, mais conhecido como CSS, é uma linguagem de estilos que,
+        assim como o HTML, também não é considerada uma linguagem de programação.
+        Ela é responsável por separar a parte estrutural da aplicação (que ficará nas mãos do HTML)
+        da parte estética. Para utilizar o CSS, usamos da seguinte sintaxe:
+
+        seletor {
+        propriedade: valor;
+        }
+
+CSS é uma linguagem de estilos utilizada para definir cores, fontes, tamanhos,
+posicionamento e qualquer outro valor estético para os elementos da página.
+
+        Para completar a grande tríade do desenvolvimento front-end, temos o Javascript,
+a única linguagem de programação
+das 3 tecnologias citadas.
+
+Ele adiciona movimento às páginas web, além de permitir o processamento e transformação
+de dados enviados e recebidos. Ele permite criar conteúdos que se atualizam de forma dinâmica
+e animada, dando vida às aplicações
+que antes eram apenas estruturadas com HTML de forma estática.
+
+
+alert(‘Hello World’);
+
+alert(‘Hello World’); 
+
+<script src=”nome_do_arquivo_js.js”></script>
+
+Javascript: linguagem de programação utilizada para deixar a página com mais movimento,
+podendo atualizar
+elementos dinamicamente e lidar melhor com dados enviados e recebidos na página.
+Comparando agora cada uma delas, podemos utilizar de exemplo o corpo humano como uma página
+web da seguinte forma:
+O HTML é o esqueleto, composto dos ossos que o sustenta. O CSS é a pele, cabelo e roupas,
+criando o visual que realmente enxergamos quando olhamos para alguma pessoa.
+E por fim, o Javascript é o músculo, que dá movimento ao corpo.
+
+
+    
+
+
+

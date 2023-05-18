@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../Escola/projeto_2"
+		},
+		{
+			"name": "agenda",
+			"path": "../../Escola/agenda"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "agenda"
+	}
+}

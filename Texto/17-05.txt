@@ -1,0 +1,492 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+main {
+    padding: 10px;
+    height: 80%;
+
+}
+form{
+    margin: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 1px 1px gray;
+    text-align: center;
+}
+input {
+    margin-bottom: 5px;
+    font-size: 16px;
+    border-radius: 10px;
+
+}
+input[type="text"] {
+    padding: 5px;
+    outline: none;
+    width: 90%;
+
+}
+input[type="submit"] {
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    background-color: lightgreen;
+    width: 50%;
+
+}
+.list {
+    padding: 10px;
+    margin-top: 10px;
+    height: 60%;
+    background-color: lightyellow;
+}
+ul {
+    list-style: none;
+    overflow: scroll;
+    height: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+li {
+    border-bottom: 1px solid darkslateblue;
+    margin-top: 5px;
+}
+button {
+    margin-left: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: red;
+
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https: //fonts.googleapis.com/css2?family= Pacifico &família= Roboto:wght@700 & display=swap" rel="stylesheet" >
+    <link rel="stylesheet" href="./main.css"/>
+    <title>Lista de Contato</title>
+    </head>
+    <body>
+    <main>
+        <form>
+            <input type="hidden" name="id" />
+            <input mame="nome" type="text" maxlength="50" placeholder="Nome" required/>
+            <input mame="telefone" type="text" maxlength="50" placeholder="Telefone" required/>
+            <input type="submit" value="Salvar">
+        </form>
+        <div class="list">
+            <input id="pesquisa" type= "text" placeholder="Pesquisar" onkeyup="listar(this.value)"/>
+            <ul>
+
+            </ul>
+
+        </div>
+    </main>
+    <script sr="main.js"></script>   
+    </body>
+</html>
+
+let lista = localStorage.getItem("minha lista");
+const formulario = document.querySelector("form");
+const ulPessoas = document.querySelector("ul");
+
+if (lista){
+    lista = JSON.parse(lista);
+
+} else {
+    lista = [];
+    
+}
+
+formulario.addEventListener("submit", function (e){
+    e.preventDefault();
+    let novaPessoa = new Object();
+    novaPessoa.nome = this.nome.value;
+    novaPessoa.telefone = this.telefone.value;
+    if(this.id.value !== " "&& this.id.value >=0) {
+    lista[this.id.value] = novaPessoa;
+            
+    } else {
+        lista.push(novaPessoa); 
+    }
+
+    this.reset();
+    this.id.value = null;
+
+    salvarLS();
+    
+    listar();
+})
+
+function listar(filtro='') {
+    ulPessoas.innerHTML = "";
+    lista.forEach((item,key) => {
+
+        if (item.nome.toUpperCase.indexOf(filtro.toUpperCase()) >= 0 || fitro =="") {
+        linha =  document.createElement('li');
+
+        let s = `<button onClick="excluir(${Key})">[Excluir]</button>
+                <button onClick="editar(${Key})">[Editar]</button>`
+        
+
+        linha.innerHTML = "Nome:" + item.nome + " Telefone:" + item.telefone + s;
+        ulPessoas.appendChild(linha);
+    }
+    
+    });
+
+}
+function excluir(id) {
+    formulario.reset();
+    lista.splice(id, 1);
+    salvarLS();
+    listar();
+}
+
+function editar(id) {
+    formulario.id.value = id;
+    formulario.nome.value = lista[id].nome;
+    formulario.telefone.value = lista[id].telefone;
+    
+    
+}
+
+function salvarLS() {
+    localStorage.setItem("minhaLista", JSON,stringify(lista));
+
+
+
+
+
+
+Meu Código*******************************************
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./main.css"/>
+        <title>Agenda</title>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Agenda de Contatos</h1>   
+            </header>        
+        <form id="contatos">
+            <input type="text" id="nome_contatos" required placeholder="Nome"/>
+            <input type="text" id="telefone"required placeholder="Telefone"/>
+            <button type="submit">Cadastrar</button>
+        </form>
+    <table id="contato_tabela">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+    </table>
+
+        <script src="./main.js"></script>
+    </body>
+</html>
+
+const form = document.getElementById('form_atividade');
+const imgAprovado = '<img src="./aprovado.png" alt="Emoji festejando"/>';
+const imgReprovado = '<img src="./reprovado.png" alt="Emoji desapontado"/>';
+let atividades = [];
+let notas = [];
+const notaMinima = parseFloat(prompt("Informe a nota mínima: "));
+
+const spanAprovado = '<span class="resultado aprovado">Aprovado</span>';
+const spanReprovado = '<span class="resultado reprovado">Reprovado</span>';
+
+let linhas = '';
+
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+    adicionarLinha();
+    atualizarTabela();
+    atualizarMedia();
+});
+
+function adicionarLinha(){
+    const inputNomeAtividade = document.getElementById('nome_atividade');
+    const inputNotaAtividade = document.getElementById('nota_atividade');
+
+    if(atividades.includes(inputNomeAtividade.value)){
+        alert(`A atividade ${inputNomeAtividade.value} já foi inserida!`)
+    }else{
+        atividades.push(inputNomeAtividade.value);
+        notas.push(parseFloat(inputNotaAtividade.value));
+        let linha = '<tr>';
+        linha += `<td>${inputNomeAtividade.value}</td>`;
+        linha += `<td>${inputNotaAtividade.value}</td>`;
+        linha += `<td>${inputNotaAtividade.value >= notaMinima ? imgAprovado : imgReprovado}</td>`;
+        linha += '</tr>';
+        linhas += linha;
+    }
+
+    inputNomeAtividade.value = '';
+    inputNotaAtividade.value = '';
+}
+
+function atualizarTabela(){
+    const corpoTabela = document.querySelector('tbody');
+    corpoTabela.innerHTML = linhas;
+}
+
+function atualizarMedia(){
+    const mediaFinal = calcularMedia();
+
+}
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    margin: 80px auto;
+    max-width: 640px;
+    width: 100%;
+}
+
+form{
+    margin-top: 40px;
+}
+
+input[type="number"] {
+    width: 300px;
+}
+
+input, button{
+    display: block;
+    padding: 8px;
+    margin-bottom: 8px;
+    width: 47%;
+    resize: none;
+    border-radius: 20px;
+}
+
+button{
+    background-color: #eb19d9;
+    border: none;
+    text-transform: uppercase;
+    color: #ffff;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #e484f7;
+ 
+
+
+figma.com
+fazer um site grud
+
+
+
+chat********************************
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Agenda de Contatos</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      padding: 5px;
+      width: 200px;
+    }
+
+    input[type="submit"] {
+      padding: 5px 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Agenda de Contatos</h1>
+
+  <form id="contactForm">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" required>
+
+    <label for="phone">Telefone:</label>
+    <input type="text" id="phone" required>
+
+    <input type="submit" value="Cadastrar">
+  </form>
+
+  <table id="contactTable">
+    <tr>
+      <th>Nome</th>
+      <th>Telefone</th>
+    </tr>
+  </table>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      var name = document.getElementById('name').value;
+      var phone = document.getElementById('phone').value;
+
+      addContact(name, phone);
+      clearForm();
+    });
+
+    function addContact(name, phone) {
+      var table = document.getElementById('contactTable');
+      var row = table.insertRow();
+
+      var nameCell = row.insertCell();
+      var phoneCell = row.insertCell();
+
+      nameCell.textContent = name;
+      phoneCell.textContent = phone;
+    }
+
+    function clearForm() {
+      document.getElementById('name').value = '';
+      document.getElementById('phone').value = '';
+    }
+  </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agenda de Contatos</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            width: 200px;
+        }
+
+        input[type="submit"] {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Agenda de Contatos</h1>
+
+    <form id="contactForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Telefone:</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <input type="submit" value="Cadastrar">
+    </form>
+
+    <table id="contactTable">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Linhas de contatos serão adicionadas aqui -->
+        </tbody>
+    </table>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Obter os valores do formulário
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+
+            // Criar uma nova linha na tabela de contatos
+            var table = document.getElementById("contactTable").getElementsByTagName("tbody")[0];
+            var newRow = table.insertRow(table.rows.length);
+            var nameCell = newRow.insertCell(0);
+            var phoneCell = newRow.insertCell(1);
+            nameCell.innerHTML = name;
+            phoneCell.innerHTML = phone;
+
+            // Limpar os campos do formulário
+            document.getElementById("name").value = "";
+            document.getElementById("phone").value = "";
+        });
+    </script>
+</body>
+</html>
+
+
+primeflex

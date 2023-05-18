@@ -21,8 +21,6 @@ form.addEventListener('submit', function(e){
     formValido = validaNome(nomeBeneficiario.value);
 
     if(formValido){
-        const campoA = document.querySelector('#campo_a');
-        const campoB = document.querySelector('#campo_b');
         const ContainerMensagemSucesso = document.querySelector('.mensagem_sucesso');
         ContainerMensagemSucesso.innerHTML = mensagemSucesso;
         ContainerMensagemSucesso.style.display = 'block';
@@ -30,11 +28,6 @@ form.addEventListener('submit', function(e){
         nomeBeneficiario.value = '';
         numeroConta.value = '';
         valorDeposito.value = '';
-        
-    formValido = (campoB.value > campoA.value)
-
-    if (formValido) {
-        alert (mensagemSucesso);
 
     }else{
         nomeBeneficiario.style.border = '1px solid red';
