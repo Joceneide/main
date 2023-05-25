@@ -29,7 +29,7 @@ $(document).ready(function(){
             required: true 
            }
         },
-        menssagem:{
+        mensagem:{
             nome: 'Por favor, informe seu nome!',
             telefone: 'Por favor, informe seu telefone!',
             email: 'Por favor, informe seu email!',
@@ -39,7 +39,7 @@ $(document).ready(function(){
 
         },
         invalidHandler: function(evento, validador){
-            let camposIncorretos = validador.numbersOfInvalids();
+            let camposIncorretos = validador.numberOfInvalids();
             if(camposIncorretos){
                 alert(`Exixtem ${camposIncorretos}campos incorretos!`);
             }   

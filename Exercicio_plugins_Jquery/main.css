@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background-color: #fff;
+  padding-top: 100PX;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  color: black;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  color: rgb(24, 23, 23);
+  border-radius: 6px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: rgb(24, 23, 23);
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}

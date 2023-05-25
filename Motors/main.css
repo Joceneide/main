@@ -130,11 +130,16 @@ button{
     border-radius: 6px;
 }
 
+strong, .preco {
+    margin: 16px 0;
+    display: block;
+      
+}
 .preco del{
     color: #ccc;
-    font-size: 14px;   
+    font-size: 14px;
 }
-
+        
 .form_campo {
     margin-bottom: 16px;
 }
