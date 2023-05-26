@@ -24,10 +24,10 @@ $(document).ready(function(){
             },
             email:{
                 required: true            
-           },
-           veiculo_interesse:{
+            },
+            veiculo_interesse:{
             required: true 
-           }
+            }
         },
         mensagem:{
             nome: 'Por favor, informe seu nome!',

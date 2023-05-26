@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    font-size: 32px;
+    
+}
+.elementos{
+    background-color: rgb(128, 165, 42);
+    width: 420px;
+    height: 420px;
+
+}
+img{
+/*height: 50em;*/
+/* height: 70%;*/
+    width: 45vh;
+    /*height: 420px;*/
+    
+}
