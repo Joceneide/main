@@ -13,12 +13,8 @@
     margin: 0 auto;
 }
 
-header img{
-    max-width: 10px;
-    width: 80px;
-    height: 60px;
-    margin-bottom: 16px;
-    border-radius: 5px;
+.sobre_loja img{
+    width: 70%;
 }
 
 header .container{
@@ -28,15 +24,17 @@ header .container{
 }
 
 header{
-    background-color: #ff3c01
-    padding: 15px 0 0;
-    margin-bottom: 60px;
+    padding: 5px;
+    background-color: #ff3c01;
+    margin-bottom: 40px;
 }
 
-header .container h1{
-    color: #fff;
+header .container h1, h2{
+    color: #000;
     margin-bottom: 15px;
+    font-size: 20px;
 }
+
 
 header .container ul{
     list-style: none;
@@ -44,7 +42,7 @@ header .container ul{
 
 header .container li{
     display: inline;
-    margin-left: 20px;
+    
 }
 
 header .container a{
@@ -69,9 +67,12 @@ header .container a{
 }
 
 .produto img{
+    width: 100%;
+    height: 240px;
     margin-top: 50px;
     margin-bottom: 50px;
     max-width: 100%;
+    border-radius: 6px;
 }
 
 .produto article{
@@ -79,10 +80,6 @@ header .container a{
     font-size: 2em;
 }
 
-.produto img{
-    width: 100%;
-    height: 240px;
-}
 
 .produto p{
     margin-top: 5px;
@@ -91,12 +88,14 @@ header .container a{
 
 ._produtos h2{
     margin-top: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 30px;
+
 }
 
 .produtos{
     display: grid;
-    grid-template-columns: repeat(4, 24%);
+    grid-template-columns: repeat(4, 24.5%);
     column-gap: 2%;
     row-gap: 5%;
 }

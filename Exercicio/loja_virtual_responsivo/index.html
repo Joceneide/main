@@ -25,13 +25,13 @@
                 </ul>
             </div>
         </header>
-        <div class="container conteudo">
+        <div class="container_conteudo container">
             <main>
                 <section id="sobre" class="sobre_loja">
                     <div>
-                        <img src="./fachada.jpg"/>
+                        <img src="./fachada.jpg" alt="">
                     </div>
-                    <div id="lanche">
+                    <div id="linha">
                         <h2>Sobre a loja</h2>
                         <span></span>
                         <h3>
@@ -41,7 +41,7 @@
                 </section>
                 <section id="produtos" class="_produtos">
                     <h2>Produtos</h2>
-                    <div id="lanche">
+                    <div id="linha">
                         <span></span>
                     </div>
                     <div class="produtos">
@@ -112,5 +112,12 @@
         <script src="/Motors/js/jquery.validate.min.js"></script>
         <Script  src="/Motors/js/messages_pt_BR.min.js"> </Script>
         <script src="/Motors/js/main.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('btn_menu').click(function(){
+                    $('.menu').slideToggle();
+                })
+            })
+        </script>
     </body>
 </html>
