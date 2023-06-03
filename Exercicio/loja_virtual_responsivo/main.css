@@ -1,0 +1,159 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Bungee', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sobre_loja img{
+    width: 70%;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+    padding: 5px;
+    background-color: #ff3c01;
+    margin-bottom: 40px;
+}
+
+header .container h1, h2{
+    color: #000;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+
+header .container ul{
+    list-style: none;
+}
+
+header .container li{
+    display: inline;
+    
+}
+
+header .container a{
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.sobre_loja{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+#linha span{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 4px;
+    width: 102%;
+    background-color:  #ff3c01;
+    display: block;
+}
+
+.produto img{
+    width: 100%;
+    height: 240px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.produto article{
+    display: flex;
+    font-size: 2em;
+}
+
+
+.produto p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+._produtos h2{
+    margin-top: 50px;
+    margin-bottom: 15px;
+    font-size: 30px;
+
+}
+
+.produtos{
+    display: grid;
+    grid-template-columns: repeat(4, 24.5%);
+    column-gap: 2%;
+    row-gap: 5%;
+}
+
+.produto button{
+    background-color: #ff8801;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.produto button:hover{
+    cursor: pointer;
+    background-color: #ff3c01;
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px){
+
+    .container{
+        max-width: 90%;
+    }
+
+    .produtos{
+        grid-template-columns: repeat(2, 49%);
+    }
+
+    .produto img{
+        max-width: 320px;
+    }
+
+    .sobre_loja{
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 640px){
+
+    .conteudo{
+        display: block;
+    }
+
+    .container{
+        max-width: 90%;
+    }
+
+    .produtos{
+        display: inline;
+    }
+
+    .produto img{
+        max-width: 320px;
+    }
+
+    .sobre_loja{
+        display: inline;
+    }
+}
