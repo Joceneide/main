@@ -8,43 +8,49 @@
     <title>Carousel</title>
     <style>
         .carousel-item{
-            max-width: 340px;
+            max-height: 340px;
         }
         img{
-            max-height:  340px;
             width: 100%;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div id= "carousel-ex" class="carousel slide" data -bs-ride="carousel">
-            <div class="carousel-imer">
+        <div id="carousel-ex" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
                 <div data-bs-interval="2000" class="carousel-item active">
                     <img src="https://cdn.pixabay.com/photo/2016/09/07/11/37/sunset-1651426_1280.jpg">
                     <div class="carousel-caption">
-                    <h5>O calor do verão</h5>
+                        <h5>Praia</h5>
+                    </div>
+                </div>
+                <div data-bs-interval="2000" class="carousel-item">
+                    <img src="https://cdn.pixabay.com/photo/2014/12/16/22/25/sunset-570881_1280.jpg">
+                    <div class="carousel-caption">
+                        <h5>Férias</h5>
+                    </div>
+                </div>
+                <div data-bs-interval="2000" class="carousel-item">
+                    <img src="https://cdn.pixabay.com/photo/2015/03/28/16/40/lake-696098_1280.jpg">
+                    <div class="carousel-caption">
+                        <h5>Por do sol</h5>
+                    </div>
                 </div>
             </div>
-            <div data-bs-interval="2000" class="carousel-item ">
-                <img src="https://cdn.pixabay.com/photo/2014/12/16/22/25/sunset-570881_1280.jpg">
-        </div>
-        <div data-bs-interval="2000" class="carousel-item">
-                <img src="https://cdn.pixabay.com/photo/2015/03/28/16/40/lake-696098_1280.jpg">
+            <button class="carousel-control-prev" data-bs-target="#carousel-ex" data-bs-slide="prev" type="button">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" data-bs-target="#carousel-ex" data-bs-slide="next" type="button">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-ex" class="active" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#carousel-ex" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-ex" data-bs-slide-to="2"></button>
             </div>
         </div>
-        <button class="carousel-control-prev" data-bs-target="#carousel-ex" data-bs-slide="prev" type="button">
-            <span class="carousel-control-prev-icon"></span>
-        <button class="carousel-control-next"data-bs-target="#carousel-ex" data-bs-slide="next" type="button">
-            <span class="carousel-control-next-icon"></span>
-        </button>
-        <div class="carousel-indicators">
-        <button type="button"data-bs-target="carousel-ex" class="active" data-bs-slide=""></button>
-        <button type="button"data-bs-target="carousel-ex"></button>
-        <button type="button"data-bs-target="carousel-ex"></button>
     </div>
-    </div>
-    <script src="./lib/bootstrap.bundle.min.js">
-    </script>
+    <script src="./lib/bootstrap.bundle.min.js"></script>
 </body>
 </html>
